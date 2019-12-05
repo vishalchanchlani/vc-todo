@@ -24,7 +24,7 @@ class CategoryViewController: UITableViewController {
     
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
         var textFeild = UITextField()
-        let alert = UIAlertController(title: "Add new Category", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add new TASK", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add new", style: .default) { (action) in
             let newItem = Category(context: self.context)
             newItem.name = textFeild.text
@@ -33,7 +33,7 @@ class CategoryViewController: UITableViewController {
             
         }
         alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Enter new category name"
+            alertTextField.placeholder = "Enter new Task "
             textFeild = alertTextField
         }
         alert.addAction(action)
